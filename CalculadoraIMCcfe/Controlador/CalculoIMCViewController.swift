@@ -9,21 +9,29 @@ import UIKit
 
 class CalculoIMCViewController: UIViewController {
 
+    @IBOutlet weak var pesoLabel: UILabel!
+    @IBOutlet weak var pesoSlider: UISlider!
+    @IBOutlet weak var alturaSlider: UISlider!
+    @IBOutlet weak var alturaLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func pesoSliderChanged(_ sender: UISlider) {
+        print(sender.value)
+        pesoLabel.text = " \(String(sender.value)) Kg."
+        
     }
-    */
+    
+    @IBAction func alturaSliderChanged(_ sender: UISlider) {
+        print(sender.value)
+        alturaLabel.text = " \(String(sender.value)) cms."
+    }
+    
 
 }

@@ -14,6 +14,8 @@
 		607B50D0289C5D8100CEC17E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607B50CE289C5D8100CEC17E /* LaunchScreen.storyboard */; };
 		607B50DB289C5DE000CEC17E /* ResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607B50DA289C5DE000CEC17E /* ResultadoViewController.swift */; };
 		607B50DD289C5E0200CEC17E /* CalculoIMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607B50DC289C5E0200CEC17E /* CalculoIMCViewController.swift */; };
+		607B50DF289C631C00CEC17E /* CerebroCalculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607B50DE289C631C00CEC17E /* CerebroCalculadora.swift */; };
+		607B50E1289C634500CEC17E /* AtributoIMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607B50E0289C634500CEC17E /* AtributoIMC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		607B50D1289C5D8100CEC17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607B50DA289C5DE000CEC17E /* ResultadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoViewController.swift; sourceTree = "<group>"; };
 		607B50DC289C5E0200CEC17E /* CalculoIMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoIMCViewController.swift; sourceTree = "<group>"; };
+		607B50DE289C631C00CEC17E /* CerebroCalculadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerebroCalculadora.swift; sourceTree = "<group>"; };
+		607B50E0289C634500CEC17E /* AtributoIMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtributoIMC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,6 @@
 				607B50D7289C5D8F00CEC17E /* Modelo */,
 				607B50C3289C5D7E00CEC17E /* AppDelegate.swift */,
 				607B50C5289C5D7E00CEC17E /* SceneDelegate.swift */,
-				607B50C9289C5D7E00CEC17E /* Main.storyboard */,
 				607B50CC289C5D8100CEC17E /* Assets.xcassets */,
 				607B50CE289C5D8100CEC17E /* LaunchScreen.storyboard */,
 				607B50D1289C5D8100CEC17E /* Info.plist */,
@@ -74,6 +77,8 @@
 		607B50D7289C5D8F00CEC17E /* Modelo */ = {
 			isa = PBXGroup;
 			children = (
+				607B50DE289C631C00CEC17E /* CerebroCalculadora.swift */,
+				607B50E0289C634500CEC17E /* AtributoIMC.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 		607B50D8289C5D9800CEC17E /* Vista */ = {
 			isa = PBXGroup;
 			children = (
+				607B50C9289C5D7E00CEC17E /* Main.storyboard */,
 			);
 			path = Vista;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			files = (
 				607B50C4289C5D7E00CEC17E /* AppDelegate.swift in Sources */,
 				607B50DB289C5DE000CEC17E /* ResultadoViewController.swift in Sources */,
+				607B50DF289C631C00CEC17E /* CerebroCalculadora.swift in Sources */,
+				607B50E1289C634500CEC17E /* AtributoIMC.swift in Sources */,
 				607B50C6289C5D7E00CEC17E /* SceneDelegate.swift in Sources */,
 				607B50DD289C5E0200CEC17E /* CalculoIMCViewController.swift in Sources */,
 			);
