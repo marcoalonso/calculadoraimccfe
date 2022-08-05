@@ -7,23 +7,42 @@
 
 import UIKit
 
-class ResultadoViewController: UIViewController {
 
+
+class ResultadoViewController: UIViewController {
+    
+    // MARK: - Variables para recibir informacion
+    var valorIMC: String?
+    var aviso: String?
+    var colorIMC: UIColor?
+    var imageIMC: UIImage?
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var resultadoIMCLabel: UILabel!
+    @IBOutlet weak var imagenIMCImageView: UIImageView!
+    @IBOutlet weak var avisoLabel: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI(){
+        resultadoIMCLabel.text = "Resultado: \(valorIMC ?? "0.0")"
+        avisoLabel.text = aviso ?? ""
+        imagenIMCImageView.image = imageIMC ?? UIImage(named: "imc")
+        //color de label
+        resultadoIMCLabel.textColor = colorIMC ?? UIColor.white
     }
-    */
-
+    
+    
+    // MARK: - Accion del boton calcular de nuevo
+    
+    @IBAction func calcularNuevoBtn(_ sender: UIButton) {
+        //regresar a una pantalla atras
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 }

@@ -102,7 +102,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Knh-Gi-gTB" kind="show" id="qs7-T7-PSV"/>
+                                            <action selector="calcularBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZEI-uL-EF3"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKP-TS-aSl">
@@ -127,6 +127,7 @@
                         <outlet property="alturaSlider" destination="7mF-FQ-gEh" id="VQj-6R-qT6"/>
                         <outlet property="pesoLabel" destination="Ux0-we-IIc" id="43L-2j-OhW"/>
                         <outlet property="pesoSlider" destination="87N-Ux-T13" id="Dha-7s-GPf"/>
+                        <segue destination="Knh-Gi-gTB" kind="show" identifier="calcular" id="yyE-QS-ly0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -184,6 +185,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="calcularNuevoBtn:" destination="Knh-Gi-gTB" eventType="touchUpInside" id="kwg-Og-CsW"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glL-Sv-xRz">
                                         <rect key="frame" x="0.0" y="600" width="374" height="102"/>
@@ -202,6 +206,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cH8-SN-oAS"/>
+                    <connections>
+                        <outlet property="avisoLabel" destination="aWg-af-9Jt" id="9JE-Yc-Qbk"/>
+                        <outlet property="imagenIMCImageView" destination="7gv-7b-gHT" id="SRD-NM-6FG"/>
+                        <outlet property="resultadoIMCLabel" destination="LBf-3G-tie" id="xif-s8-pTw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PH-dN-fDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

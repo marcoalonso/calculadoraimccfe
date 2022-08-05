@@ -16,7 +16,8 @@ import UIKit
  */
 
 struct CerebroCalculadora {
-    var imc: AtributoIMC
+    
+    var imc: AtributoIMC?
     
     var nombre: String?
     
@@ -26,30 +27,30 @@ struct CerebroCalculadora {
         let valorIMC = peso / (alturaEnMts * alturaEnMts)
         
         if valorIMC < 18.5 {
-            imc = AtributoIMC(valor: valorIMC, aviso: "Tu indice es muy bajo, trata de comer mas frutas y verduras", color: UIColor.yellow, imagen: UIImage(named: "imc")!)
+            imc = AtributoIMC(valor: valorIMC, aviso: "Tu indice es muy bajo, trata de comer mas frutas y verduras", color: UIColor.yellow, imagen: UIImage(named: "flaco")!)
         } else if valorIMC < 24.9 {
-            imc = AtributoIMC(valor: valorIMC, aviso: "Felicidades tu IMC esta en un rango normal sigue comiendo asi!", color: UIColor.green, imagen: UIImage(named: "imc")!)
+            imc = AtributoIMC(valor: valorIMC, aviso: "Felicidades tu IMC esta en un rango normal sigue comiendo asi!", color: UIColor.green, imagen: UIImage(named: "normal")!)
         } else if valorIMC < 29.9 {
-            imc = AtributoIMC(valor: valorIMC, aviso: "Alerta, tu IMC es elevado por lo que tienes principios de obesidad, cuida tu alimentacion    ", color: UIColor.orange, imagen: UIImage(named: "imc")!)
+            imc = AtributoIMC(valor: valorIMC, aviso: "Alerta, tu IMC es elevado por lo que tienes principios de obesidad, cuida tu alimentacion    ", color: UIColor.orange, imagen: UIImage(named: "sobrepeso")!)
         } else {
-            imc = AtributoIMC(valor: valorIMC, aviso: "Alerta tienes obesidad Extrema! bajale a la comida chatarra", color: UIColor.red, imagen: UIImage(named: "imc")!)
+            imc = AtributoIMC(valor: valorIMC, aviso: "Alerta tienes obesidad Extrema! bajale a la comida chatarra", color: UIColor.red, imagen: UIImage(named: "sobrepeso")!)
         }
     }
     
-    func retornarValorIMC() -> Float {
-        return imc.valor
+    func retornarValorIMC() -> String {
+        return String(format: "%.1f", imc?.valor ?? 0.0)
     }
     
     func darAviso() -> String {
-        return imc.aviso
+        return imc?.aviso ?? ""
     }
     
     func retornarColor() -> UIColor {
-        return imc.color
+        return imc?.color ?? UIColor.red
     }
     
     func retornarImagen() -> UIImage {
-        return imc.imagen
+        return imc?.imagen ?? UIImage(systemName: "car")!
     }
     
 }
